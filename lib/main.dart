@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       title: 'FindCribs',
       theme: ThemeData(),
       home: AnimatedSplashScreen(
-        duration: 3800,
+        duration: 3350,
         splashIconSize: double.maxFinite,
         splash: 'assets/images/splash_screen.gif',
         nextScreen: const OnboardingScreen(),
