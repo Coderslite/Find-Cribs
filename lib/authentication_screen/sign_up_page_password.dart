@@ -1,6 +1,9 @@
+import 'package:find_cribs/authentication_screen/sign_up_page.dart';
+import 'package:find_cribs/authentication_screen/sign_up_page_name.dart';
 import 'package:find_cribs/components/colors.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class PasswordScreen extends StatefulWidget {
   const PasswordScreen({Key? key}) : super(key: key);
@@ -96,6 +99,8 @@ class _PasswordScreenState extends State<PasswordScreen> {
                 child: ElevatedButton(
                     // Connect EndPoint
                     onPressed: () {
+                      // Get X Navigation
+                      Get.to(const NameScreen());
                       if (kDebugMode) {
                         print('Hello baby girl');
                       }
@@ -124,6 +129,7 @@ class _PasswordScreenState extends State<PasswordScreen> {
                   InkWell(
                     onTap: () {
                       // Connect EndPoint
+                      Get.off(const EmailScreen());
                       if (kDebugMode) {
                         print('Hello Baby');
                       }

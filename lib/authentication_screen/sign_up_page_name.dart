@@ -1,6 +1,9 @@
+import 'package:find_cribs/authentication_screen/sign_in_page.dart';
+import 'package:find_cribs/authentication_screen/sign_in_verify_email_page.dart';
 import 'package:find_cribs/components/colors.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class NameScreen extends StatefulWidget {
   const NameScreen({Key? key}) : super(key: key);
@@ -118,6 +121,7 @@ class _NameScreenState extends State<NameScreen> {
                 child: ElevatedButton(
                     // Connect EndPoint
                     onPressed: () {
+                      Get.off(const VerifyEmailScreen());
                       if (kDebugMode) {
                         print('Hello baby girl');
                       }
@@ -146,6 +150,7 @@ class _NameScreenState extends State<NameScreen> {
                   InkWell(
                     onTap: () {
                       // Connect EndPoint
+                      Get.off(const LoginScreen());
                       if (kDebugMode) {
                         print('Hello Baby');
                       }

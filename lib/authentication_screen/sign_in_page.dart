@@ -1,16 +1,19 @@
+import 'package:find_cribs/authentication_screen/sign_up_page.dart';
 import 'package:find_cribs/components/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
-class LoingScreen extends StatefulWidget {
-  const LoingScreen({Key? key}) : super(key: key);
+class LoginScreen extends StatefulWidget {
+  const LoginScreen({Key? key}) : super(key: key);
 
   @override
-  _LoingScreenState createState() => _LoingScreenState();
+  _LoginScreenState createState() => _LoginScreenState();
 }
 
-class _LoingScreenState extends State<LoingScreen> {
+class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     // Mobile Width & Height
@@ -91,11 +94,7 @@ class _LoingScreenState extends State<LoingScreen> {
                 width: mobileWidth * 0.99,
                 child: ElevatedButton(
                     // Connect EndPoint
-                    onPressed: () {
-                      if (kDebugMode) {
-                        print('Hello baby girl');
-                      }
-                    },
+                    onPressed: () {},
                     style: ElevatedButton.styleFrom(
                         fixedSize: const Size(500, 60),
                         primary: mobileButtonColor),
@@ -119,6 +118,7 @@ class _LoingScreenState extends State<LoingScreen> {
                   ),
                   InkWell(
                     onTap: () {
+                      Get.off(const EmailScreen());
                       // Connect EndPoint
                       if (kDebugMode) {
                         print('Hello Baby');

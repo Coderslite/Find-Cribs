@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
-import 'authentication_screen/sign_in_verify_email_page.dart';
+import 'authentication_screen/sign_up_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-        debugShowCheckedModeBanner: false, home: VerifyEmailScreen());
+    return const GetMaterialApp(
+        debugShowCheckedModeBanner: false, home: EmailScreen());
   }
 }

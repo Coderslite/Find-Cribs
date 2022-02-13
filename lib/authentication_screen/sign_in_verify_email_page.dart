@@ -78,6 +78,7 @@ class _VerifyEmailScreenState extends State<VerifyEmailScreen> {
                 child: ElevatedButton(
                     // Connect EndPoint
                     onPressed: () {
+                      // Get.off(const Verified Successfully)
                       if (kDebugMode) {
                         print('Hello baby girl');
                       }
