@@ -1,38 +1,33 @@
-import 'package:find_cribs/authentication_screen/forgot_password.dart';
-import 'package:find_cribs/authentication_screen/sign_up_page.dart';
-import 'package:find_cribs/components/colors.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
+import '../components/colors.dart';
+import '../widgets/back_arrow.dart';
+import 'password_changed.dart';
+import 'sign_in_verify_email_page.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+class ChangePasswordScreen extends StatefulWidget {
+  const ChangePasswordScreen({Key? key}) : super(key: key);
 
   @override
-  _LoginScreenState createState() => _LoginScreenState();
+  State<ChangePasswordScreen> createState() => _ChangePasswordScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
   @override
   Widget build(BuildContext context) {
-    // Mobile Width & Height
     double mobileWidth = MediaQuery.of(context).size.width;
-    // double mobileHeight = MediaQuery.of(context).size.height;
     return Scaffold(
-      backgroundColor: mobileBackgroundColor,
       body: SingleChildScrollView(
         child: Container(
-          padding: const EdgeInsets.only(left: 25, right: 25),
+          padding: const EdgeInsets.only(right: 25, left: 25),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              const BackArrow(),
               const Padding(
-                padding: EdgeInsets.only(top: 150),
+                padding: EdgeInsets.only(top: 110),
                 child: Text(
-                  "Welcome Back!",
+                  "Forgot Password",
                   style: TextStyle(
                       color: mobileTextColor,
                       fontFamily: 'RedHatDisplay',
@@ -41,13 +36,12 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
               mobileSizedBoxHeight,
-              mobileSizedBoxHeight,
               const Text(
-                'Email Address',
+                'New Password',
                 style: TextStyle(
                     color: mobileFormTextColor,
                     fontFamily: 'RedHatDisplayLight',
-                    fontSize: 12),
+                    fontSize: 14),
               ),
               mobileSizedBoxHeight2,
               TextFormField(
@@ -58,11 +52,11 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               mobileSizedBoxHeight,
               const Text(
-                'Password',
+                'Retype New Password',
                 style: TextStyle(
                     color: mobileFormTextColor,
                     fontFamily: 'RedHatDisplayLight',
-                    fontSize: 12),
+                    fontSize: 14),
               ),
               mobileSizedBoxHeight2,
               TextFormField(
@@ -72,63 +66,30 @@ class _LoginScreenState extends State<LoginScreen> {
                     border: OutlineInputBorder(borderSide: BorderSide())),
               ),
               mobileSizedBoxHeight,
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  InkWell(
-                    onTap: () {
-                      Get.to(ForgotPasswordScreen());
-                    },
-                    child: const Text(
-                      'Forgot Password?',
-                      style: TextStyle(
-                          color: mobileButtonColor,
-                          fontWeight: FontWeight.w600),
-                    ),
-                  ),
-                ],
-              ),
               mobileSizedBoxHeight2,
               SizedBox(
                 width: mobileWidth * 0.99,
                 child: ElevatedButton(
                     // Connect EndPoint
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const PasswordChangedScreen()));
+                    },
                     style: ElevatedButton.styleFrom(
                         fixedSize: const Size(500, 60),
                         primary: mobileButtonColor),
                     child: const Text(
                       //  Connect EndPoint
 
-                      'Login',
+                      'Reset Password',
                       style: TextStyle(
                           fontFamily: 'RedHatDisplay',
                           color: mobileButtonTextColor,
                           fontSize: 20),
                     )),
-              ),
-              mobileSizedBoxHeight,
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Text(
-                    'New Here?',
-                    style: TextStyle(color: mobileFormTextColor),
-                  ),
-                  InkWell(
-                    onTap: () {
-                      Get.off(const EmailScreen());
-                      // Connect EndPoint
-                      if (kDebugMode) {
-                        print('Hello Baby');
-                      }
-                    },
-                    child: const Text(' Sign Up',
-                        style: TextStyle(
-                            color: mobileButtonColor,
-                            fontWeight: FontWeight.bold)),
-                  ),
-                ],
               ),
             ],
           ),

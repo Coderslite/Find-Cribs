@@ -34,8 +34,8 @@ class _EmailScreenState extends State<EmailScreen> {
                   style: TextStyle(
                       color: mobileTextColor,
                       fontFamily: 'RedHatDisplay',
-                      fontSize: 40,
-                      fontWeight: FontWeight.bold),
+                      fontSize: 36,
+                      fontWeight: FontWeight.w700),
                 ),
               ),
               mobileSizedBoxHeight,
@@ -62,24 +62,25 @@ class _EmailScreenState extends State<EmailScreen> {
               SizedBox(
                 width: mobileWidth * 0.99,
                 child: ElevatedButton(
-                    // Connect EndPoint
-                    onPressed: () {
-                      // Get X Navigation
-                      Get.to(const PasswordScreen(),
-                          transition: Transition.fadeIn);
-                    },
-                    style: ElevatedButton.styleFrom(
-                        fixedSize: const Size(500, 60),
-                        primary: mobileButtonColor),
-                    child: const Text(
-                      //  Connect EndPoint
+                  // Connect EndPoint
+                  onPressed: () {
+                    // Get X Navigation
+                    Get.to(const PasswordScreen(),
+                        transition: Transition.fadeIn);
+                  },
+                  style: ElevatedButton.styleFrom(
+                      fixedSize: const Size(500, 60),
+                      primary: mobileButtonColor),
+                  child: const Text(
+                    //  Connect EndPoint
 
-                      'Continue',
-                      style: TextStyle(
-                          fontFamily: 'RedHatDisplay',
-                          color: mobileButtonTextColor,
-                          fontSize: 20),
-                    )),
+                    'Continue',
+                    style: TextStyle(
+                        fontFamily: 'RedHatDisplay',
+                        color: mobileButtonTextColor,
+                        fontSize: 20),
+                  ),
+                ),
               ),
               mobileSizedBoxHeight,
               Row(children: [
