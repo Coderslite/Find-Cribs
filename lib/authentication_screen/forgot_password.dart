@@ -1,38 +1,34 @@
-import 'package:find_cribs/authentication_screen/verified.dart';
-import 'package:find_cribs/components/colors.dart';
+import 'package:find_cribs/authentication_screen/change_password.dart';
 import 'package:find_cribs/widgets/back_arrow.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../components/colors.dart';
+import 'sign_up_page_password.dart';
 
-class VerifyEmailScreen extends StatefulWidget {
-  const VerifyEmailScreen({Key? key}) : super(key: key);
+class ForgotPasswordScreen extends StatefulWidget {
+  const ForgotPasswordScreen({Key? key}) : super(key: key);
 
   @override
-  _VerifyEmailScreenState createState() => _VerifyEmailScreenState();
+  _ForgotPasswordScreenState createState() => _ForgotPasswordScreenState();
 }
 
-class _VerifyEmailScreenState extends State<VerifyEmailScreen> {
+class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
   @override
   Widget build(BuildContext context) {
-    // Mobile Width & Height
     double mobileWidth = MediaQuery.of(context).size.width;
-    double mobileHeight = MediaQuery.of(context).size.height;
     return Scaffold(
-      backgroundColor: mobileBackgroundColor,
       body: SingleChildScrollView(
         child: Container(
-          padding: const EdgeInsets.only(left: 25, right: 25),
+          padding: const EdgeInsets.only(right: 25, left: 25),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.center,
+            //  mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const BackArrow(),
               const Padding(
-                padding: EdgeInsets.only(top: 200),
+                padding: EdgeInsets.only(top: 150),
                 child: Text(
-                  "Verify Account",
+                  "Forgot Password",
                   style: TextStyle(
                       color: mobileTextColor,
                       fontFamily: 'RedHatDisplay',
@@ -40,16 +36,17 @@ class _VerifyEmailScreenState extends State<VerifyEmailScreen> {
                       fontWeight: FontWeight.w700),
                 ),
               ),
-              mobileSizedBoxHeight,
+              SizedBox(height: 18),
               const Text(
-                'A code has been sent to your registered email address',
-                style: TextStyle(color: mobileTextSmallColor, fontSize: 14),
+                'A code has been sent to your registered\nemail address',
+                style: TextStyle(
+                    color: mobileTextSmallColor,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w400),
               ),
-              // mobileSizedBoxHeight,
-              // mobileSizedBoxHeight,
-
-              mobileSizedBoxHeight,
-              mobileSizedBoxHeight2,
+              SizedBox(
+                height: 44,
+              ),
               TextFormField(
                 // controller: emailController,
                 decoration: const InputDecoration(
@@ -60,26 +57,28 @@ class _VerifyEmailScreenState extends State<VerifyEmailScreen> {
               SizedBox(
                 width: mobileWidth * 0.99,
                 child: ElevatedButton(
-                    // Connect EndPoint
-                    onPressed: () {
-                      // Get.off(const Verified Successfully)
-                      Navigator.pushReplacement(context, MaterialPageRoute<void>(
-                          builder: (BuildContext context) => const VerifiedScreen(),
-                        ),
-                      );
-                    },
-                    style: ElevatedButton.styleFrom(
-                        fixedSize: const Size(500, 60),
-                        primary: mobileButtonColor),
-                    child: const Text(
-                      //  Connect EndPoint
+                  // Connect EndPoint
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ChangePasswordScreen(),
+                      ),
+                    );
+                  },
+                  style: ElevatedButton.styleFrom(
+                      fixedSize: const Size(500, 60),
+                      primary: mobileButtonColor),
+                  child: const Text(
+                    //  Connect EndPoint
 
-                      'Verify Account',
-                      style: TextStyle(
-                          fontFamily: 'RedHatDisplay',
-                          color: mobileButtonTextColor,
-                          fontSize: 20),
-                    )),
+                    'Verify Code',
+                    style: TextStyle(
+                        fontFamily: 'RedHatDisplay',
+                        color: mobileButtonTextColor,
+                        fontSize: 20),
+                  ),
+                ),
               ),
               mobileSizedBoxHeight,
               Row(
@@ -95,7 +94,6 @@ class _VerifyEmailScreenState extends State<VerifyEmailScreen> {
                   InkWell(
                     onTap: () {
                       // Connect EndPoint
-                     
                     },
                     child: const Text(' Resend',
                         style: TextStyle(
@@ -103,7 +101,7 @@ class _VerifyEmailScreenState extends State<VerifyEmailScreen> {
                             fontWeight: FontWeight.bold)),
                   ),
                 ],
-              ),
+              )
             ],
           ),
         ),

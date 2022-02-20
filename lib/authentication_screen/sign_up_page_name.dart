@@ -1,6 +1,7 @@
 import 'package:find_cribs/authentication_screen/sign_in_page.dart';
 import 'package:find_cribs/authentication_screen/sign_in_verify_email_page.dart';
 import 'package:find_cribs/components/colors.dart';
+import 'package:find_cribs/widgets/back_arrow.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -27,25 +28,7 @@ class _NameScreenState extends State<NameScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
-                margin: const EdgeInsets.only(top: 20),
-                height: 40,
-                width: 40,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(13),
-                    color: mobileIconColor),
-                child: IconButton(
-                  padding: const EdgeInsets.only(left: 9),
-                  alignment: Alignment.center,
-                  onPressed: () {
-                    print('YOYO');
-                  },
-                  icon: const Icon(
-                    Icons.arrow_back_ios,
-                    color: Colors.black,
-                  ),
-                ),
-              ),
+              const BackArrow(),
               const Padding(
                 padding: EdgeInsets.only(top: 100),
                 child: Text(
@@ -53,8 +36,8 @@ class _NameScreenState extends State<NameScreen> {
                   style: TextStyle(
                       color: mobileTextColor,
                       fontFamily: 'RedHatDisplay',
-                      fontSize: 40,
-                      fontWeight: FontWeight.bold),
+                      fontSize: 36,
+                      fontWeight: FontWeight.w700),
                 ),
               ),
               mobileSizedBoxHeight,
@@ -121,10 +104,10 @@ class _NameScreenState extends State<NameScreen> {
                 child: ElevatedButton(
                     // Connect EndPoint
                     onPressed: () {
-                      Get.off(const VerifyEmailScreen());
-                      if (kDebugMode) {
-                        print('Hello baby girl');
-                      }
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => VerifyEmailScreen()));
                     },
                     style: ElevatedButton.styleFrom(
                         fixedSize: const Size(500, 60),
