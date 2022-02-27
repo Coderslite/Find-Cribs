@@ -1,5 +1,5 @@
 import 'package:find_cribs/authentication_screen/verified.dart';
-import 'package:find_cribs/components/colors.dart';
+import 'package:find_cribs/components/constants.dart';
 import 'package:find_cribs/widgets/back_arrow.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';

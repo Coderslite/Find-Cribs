@@ -24,3 +24,4 @@ const mobileSizedBoxHeight2 = SizedBox(height: 10);
 const mobileTopHeight = SizedBox(height: 35);
 
 const mobileBigHeight = SizedBox(height: 80);
+const kFontFamily = 'RedHatDisplay';

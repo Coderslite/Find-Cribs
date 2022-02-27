@@ -1,6 +1,7 @@
 import 'package:find_cribs/authentication_screen/forgot_password.dart';
 import 'package:find_cribs/authentication_screen/sign_up_page.dart';
-import 'package:find_cribs/components/colors.dart';
+import 'package:find_cribs/components/constants.dart';
+import 'package:find_cribs/screens/nav_bar_home.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -93,7 +94,14 @@ class _LoginScreenState extends State<LoginScreen> {
                 width: mobileWidth * 0.99,
                 child: ElevatedButton(
                     // Connect EndPoint
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => NavBarScreen(),
+                        ),
+                      );
+                    },
                     style: ElevatedButton.styleFrom(
                         fixedSize: const Size(500, 60),
                         primary: mobileButtonColor),

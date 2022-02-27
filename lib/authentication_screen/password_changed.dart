@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../components/colors.dart';
+import '../components/constants.dart';
 
 class PasswordChangedScreen extends StatelessWidget {
   const PasswordChangedScreen({Key? key}) : super(key: key);

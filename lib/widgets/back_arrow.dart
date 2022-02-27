@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../components/colors.dart';
+import '../components/constants.dart';
 
 class BackArrow extends StatelessWidget {
   const BackArrow({

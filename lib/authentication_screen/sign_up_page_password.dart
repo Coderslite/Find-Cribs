@@ -1,6 +1,6 @@
 import 'package:find_cribs/authentication_screen/sign_up_page.dart';
 import 'package:find_cribs/authentication_screen/sign_up_page_name.dart';
-import 'package:find_cribs/components/colors.dart';
+import 'package:find_cribs/components/constants.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 // <<<<<<< gabriel
 import 'package:get/get.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // import 'authentication_screen/sign_up_page.dart';
 // =======
@@ -29,18 +30,20 @@ class MyApp extends StatelessWidget {
         //color set to transperent
       ),
     );
-    return GetMaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'FindCribs',
-      theme: ThemeData(),
-      home: AnimatedSplashScreen(
-        duration: 3350,
-        splashIconSize: double.maxFinite,
-        splash: 'assets/images/splash_screen.gif',
-        nextScreen: const OnboardingScreen(),
-        backgroundColor: const Color(0xFF0070B9),
-        centered: true,
-      ),
+    return ScreenUtilInit(
+      builder: (() => GetMaterialApp(
+            debugShowCheckedModeBanner: false,
+            title: 'FindCribs',
+            theme: ThemeData(),
+            home: AnimatedSplashScreen(
+              duration: 3350,
+              splashIconSize: double.maxFinite,
+              splash: 'assets/images/splash_screen.gif',
+              nextScreen: const OnboardingScreen(),
+              backgroundColor: const Color(0xFF0070B9),
+              centered: true,
+            ),
+          )),designSize: Size(414, 896),
     );
 // >>>>>>> main
   }
