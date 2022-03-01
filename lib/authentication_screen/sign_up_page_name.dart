@@ -1,6 +1,8 @@
 import 'package:find_cribs/authentication_screen/sign_in_page.dart';
 import 'package:find_cribs/authentication_screen/sign_in_verify_email_page.dart';
 import 'package:find_cribs/components/colors.dart';
+// import 'package:find_cribs/favourite_screen/favourite_agent.dart';
+import 'package:find_cribs/favourite_screen/favourite_page.dart';
 import 'package:find_cribs/widgets/back_arrow.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -157,12 +159,10 @@ class _NameScreenState extends State<NameScreen> {
               Center(
                 child: TextButton(
                   onPressed: () {
-                    // Connect EndPoint
-                    if (kDebugMode) {
-                      print(
-                        'Move to Next Screen',
-                      );
-                    }
+                    Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => FavouritePageScreen()));
                   },
                   child: const Text('Skip',
                       style: TextStyle(
