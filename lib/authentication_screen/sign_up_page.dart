@@ -1,3 +1,4 @@
+import 'package:find_cribs/agent_profile/profile.dart';
 import 'package:find_cribs/authentication_screen/sign_in_page.dart';
 import 'package:find_cribs/authentication_screen/sign_up_page_password.dart';
 import 'package:find_cribs/components/colors.dart';
@@ -204,7 +205,7 @@ class _EmailScreenState extends State<EmailScreen> {
                     Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => FavouritePageScreen()));
+                              builder: (context) => ProfileScreen()));
                   },
                   child: const Text('Skip',
                       style: TextStyle(
