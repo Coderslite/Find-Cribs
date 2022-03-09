@@ -1,6 +1,7 @@
 import 'package:find_cribs/authentication_screen/sign_in_page.dart';
 import 'package:find_cribs/authentication_screen/sign_up_page_password.dart';
 import 'package:find_cribs/components/constants.dart';
+import 'package:find_cribs/favourite_screen/favourite_page.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -200,12 +201,10 @@ class _EmailScreenState extends State<EmailScreen> {
               Center(
                 child: TextButton(
                   onPressed: () {
-                    // Connect EndPoint
-                    if (kDebugMode) {
-                      print(
-                        'Move to Next Screen',
-                      );
-                    }
+                    Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => FavouritePageScreen()));
                   },
                   child: const Text('Skip',
                       style: TextStyle(

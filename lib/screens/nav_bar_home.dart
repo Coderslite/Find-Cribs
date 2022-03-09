@@ -1,11 +1,12 @@
 import 'package:find_cribs/components/constants.dart';
 import 'package:find_cribs/screens/chats_screen.dart';
-import 'package:find_cribs/screens/favorite_page.dart';
 import 'package:find_cribs/screens/home_page.dart';
 import 'package:find_cribs/screens/user_profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+
+import '../favourite_screen/favourite_page.dart';
 
 class NavBarScreen extends StatefulWidget {
   const NavBarScreen({Key? key}) : super(key: key);
@@ -17,7 +18,7 @@ class NavBarScreen extends StatefulWidget {
 class _NavBarScreenState extends State<NavBarScreen> {
   final _screens = [
     const HomePageScreen(),
-    const FavoritesScreen(),
+    const FavouritePageScreen(),
     const ChatScreen(),
     const UserProfileScreen(),
   ];
