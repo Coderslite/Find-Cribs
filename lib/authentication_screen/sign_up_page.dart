@@ -1,7 +1,7 @@
 import 'package:find_cribs/agent_profile/profile.dart';
 import 'package:find_cribs/authentication_screen/sign_in_page.dart';
 import 'package:find_cribs/authentication_screen/sign_up_page_password.dart';
-import 'package:find_cribs/components/colors.dart';
+import 'package:find_cribs/components/constants.dart';
 import 'package:find_cribs/favourite_screen/favourite_page.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -157,7 +157,7 @@ class _EmailScreenState extends State<EmailScreen> {
                         const Padding(
                           padding: EdgeInsets.only(left: 8),
                           child: Text(
-                            'Continue with Google',
+                            'Continue with Facebook',
                             style: TextStyle(
                                 color: mobileTextColor,
                                 fontFamily: 'RedHatDisplayLight',

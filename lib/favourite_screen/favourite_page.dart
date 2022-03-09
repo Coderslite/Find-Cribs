@@ -1,10 +1,9 @@
-import 'package:find_cribs/components/colors.dart';
 import 'package:find_cribs/favourite_screen/favourite_agent.dart';
 import 'package:find_cribs/favourite_screen/favourite_listings.dart';
 import 'package:find_cribs/widgets/agent_listings.dart';
 import 'package:find_cribs/widgets/property_listings.dart';
 import 'package:flutter/material.dart';
-
+import 'package:find_cribs/components/constants.dart';
 class FavouritePageScreen extends StatelessWidget {
   const FavouritePageScreen({Key? key}) : super(key: key);
 

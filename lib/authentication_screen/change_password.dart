@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../components/colors.dart';
+import '../components/constants.dart';
 import '../widgets/back_arrow.dart';
 import 'password_changed.dart';
 import 'sign_in_verify_email_page.dart';

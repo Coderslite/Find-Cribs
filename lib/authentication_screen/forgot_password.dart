@@ -2,7 +2,7 @@ import 'package:find_cribs/authentication_screen/change_password.dart';
 import 'package:find_cribs/widgets/back_arrow.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../components/colors.dart';
+import '../components/constants.dart';
 import 'sign_up_page_password.dart';
 
 class ForgotPasswordScreen extends StatefulWidget {

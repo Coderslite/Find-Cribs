@@ -1,6 +1,6 @@
 import 'package:find_cribs/authentication_screen/sign_in_page.dart';
 import 'package:find_cribs/authentication_screen/sign_in_verify_email_page.dart';
-import 'package:find_cribs/components/colors.dart';
+import 'package:find_cribs/components/constants.dart';
 // import 'package:find_cribs/favourite_screen/favourite_agent.dart';
 import 'package:find_cribs/favourite_screen/favourite_page.dart';
 import 'package:find_cribs/widgets/back_arrow.dart';

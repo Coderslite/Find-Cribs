@@ -1,5 +1,6 @@
+import 'package:find_cribs/screens/nav_bar_home.dart';
 import 'package:flutter/material.dart';
-import '../components/colors.dart';
+import '../components/constants.dart';
 
 class VerifiedScreen extends StatelessWidget {
   const VerifiedScreen({Key? key}) : super(key: key);
@@ -34,7 +35,12 @@ class VerifiedScreen extends StatelessWidget {
                 // Connect EndPoint
                 onPressed: () {
                   // Get.off(const Verified Successfully)
-                  //Navigate to homepage acct verified Page
+                  Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => NavBarScreen(),
+                      ));
+
                 },
                 style: ElevatedButton.styleFrom(
                     fixedSize: const Size(500, 60), primary: mobileButtonColor),
